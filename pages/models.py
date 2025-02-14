@@ -5,6 +5,7 @@ from django.db import models
 
 
 class ContactMessage(models.Model):
+
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=20)
     email = models.EmailField()
@@ -17,6 +18,7 @@ class ContactMessage(models.Model):
 
 
 class AboutModel(models.Model):
+    objects = None
     image = models.ImageField(upload_to='images/about')
     text = models.TextField()
     
